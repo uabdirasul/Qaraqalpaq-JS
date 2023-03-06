@@ -45,6 +45,7 @@ img {
 /* site_header */
 .site_header {
   background-color: #E4E4E4;
+  margin-bottom: 2rem;
 }
 
 .site_header__container {
@@ -58,4 +59,13 @@ img {
 
 .site_header--blue_text {
   color: #008000;
+}
+
+/* hero */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero__fieldset {
+  text-align: center;
 }
