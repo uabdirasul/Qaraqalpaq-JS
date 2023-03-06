@@ -41,3 +41,21 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* site_header */
+.site_header {
+  background-color: #E4E4E4;
+}
+
+.site_header__container {
+  display: flex;
+  justify-content: center;
+}
+
+.site_header--navbar_brand {
+  color: #0000FF;
+}
+
+.site_header--blue_text {
+  color: #008000;
+}
