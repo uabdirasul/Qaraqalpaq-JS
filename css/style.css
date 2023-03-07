@@ -61,6 +61,11 @@ img {
   color: #008000;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 /* hero */
 .hero {
   margin-bottom: 2rem;
@@ -68,4 +73,29 @@ img {
 
 .hero__fieldset {
   text-align: center;
+}
+
+.article__text {
+}
+
+code {
+  background-color: #e0e0e0;
+  color: #000;
+  display: flex;
+  padding: 0.2rem;
+}
+
+.code_comment {
+  color: #708090;
+}
+
+.attentiable_article_part {
+  background-color: #fbecdd;
+  padding: 0.3rem;
+}
+
+.article_keywords {
+  background-color: #e0e0e0;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
 }
