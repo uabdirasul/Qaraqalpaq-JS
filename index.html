@@ -53,11 +53,71 @@
             <code><span>let user = “Ibrayım”<br>&nbsp;&nbsp;, age = 25<br>&nbsp;&nbsp;, message = “Sálem”;</span></code>
             <p>Texnik tárepten joqarıdaǵı usıllardıń barlıǵı bir jumıstı atqaradı. Olardan paydalanıw ózlerińizdiń talǵamıńız hám estetikańızǵa baylanıslı.</p>
             <div class="attentiable_article_part">
-              <h3></b>let’tiń ornına var<b></h4>
+              <h3><b>let’tiń ornına var</b></h3>
               <p>Eski skriptlerde, <strong class="article_keywords">let</strong> gilt sózi ornına <strong class="article_keywords">var</strong> degen gilt sózden de paydalanıp ózgeriwshi jaratıw múmkin edi:</p>
               <code><span>var message = “Sálem”;</span></code>
               <p><strong class="article_keywords">var</strong> gilt sózi menen <strong class="article_keywords">let</strong> gilt sózi derlik birdey. <strong class="article_keywords">var</strong> da ózgeriwshi jaratadı, biraq azǵantayózgesheligi bar.</p>
               <p>Olar arasındaǵı parıqtı var ushın arnalǵan bólimde kórip shıǵamız.</p>
+            </div>
+            <h2>Real ómirdegi uqsaslıq</h2>
+            <p>Eger variable’dı ústine túkirarlanbas at jazılǵan qutı dep kóz aldimizǵa keltirsek, bul variable tusinigin arqayın túsinip alamız.</p>
+            <p>Mısal ushın: message atlı ózgeriwshini ishinde “Sálem!” degen jazıw bar, sırtına bolsa message dep jazılǵan qutı dep alatuǵın bolsaq:</p>
+            <img class="article__img" src="images/variable-as-box.svg" alt="variable as box" width="384" height="384">
+            <p>Bul qutınıń ishine qálegen túrdegi maǵlıwmatımızdı qosa alamız.</p>
+            <p>Jáne de onı qálegenimizshe ózgerte alamız:</p>
+            <code><span>let message;<br>message = "Sálem!”;<br>message = “Dúnya”; <span class="code_comment">// maǵlıwmat ózgerdi</span><br>alert(message);</span></code>
+            <p>Qutı ishindegi maǵlıwmat ózgertilse, eski maǵlıwmat óship ketedi:</p>
+            <img class="article__img" src="images/variable-as-box-changed.svg" alt="variable-as-box-changed" width="584" height="584">
+            <p>Hám jáne, eki ózgeriwshi yáki “qutı” jaratıp, birinshisinen ekinshisine maǵliwmattı kóshirip de ótkere alamız:</p>
+            <code>
+              <span>let hello = “Sálem!”;<br>
+                let message;<br>
+                message = hello <span class="code_comment">// hello ózgeriwshisinen maǵlıwmattı kóshirip message ózgeriwshisine ótkeredi // endi eki ózgeriwshiniń de maǵlıwmatı birdey</span><br>
+                alert(hello);<span class="code_comment">// Sálem</span><br>alert(message); <span class="code_comment">// Sálem</span>
+              </span>
+            </code>
+            <div class="attentiable_article_part">
+              <h3><b>Ekinshi márte qáte shıǵaradı</b></h3>
+              <p>Ózgeriwshi let arqalı tek ǵana bir márte jazılıwı kerek.</p>
+              <p>Eki márte jazılsa ol qátelikke sebep boladı:</p>
+              <code><span>let message = “Sálem!”<br>// tákirarlanǵan let qátelik keltirip shıǵardı<br>let message = “Dúnya”; <span class="code_comment">// SyntaxError: ‘message’ has already been declared</span></span></code>
+            </div>
+            <h2>Ózgeriwshilerge at qoyıw</h2>
+            <p>JavaScriptte ózgeriwshilerge at qoyıwda eki sheklew bar:</p>
+            <ol>
+              <li>Qoyılǵan at tek ǵana háripler, sanlar yáki $, _ ǵa uqsas belgilerden ibarat bolıwı kerek</li>
+              <li>Qoyılǵan at sanlar menen baslanbawı kerek</li>
+            </ol>
+            <p>Qoyıw múmkin bolǵan atlarǵa mısal:</p>
+            <code><span>let paydalanıwshıAtı;<br>let test123;</span></code>
+            <p>Eger qoyılǵan atımız bir neshe sózlerden ibarat bolsa camelCase tan paydalanıw máslahát etiledi. camelCase usılı bul - sózler izbe-iz jaylasadı, birinshi sózden tısqarı hámme sóz bas hárip penen baslanadı: judaUzınAt</p>
+            <p>$ hám _ belgilerinen de paydalanıwımız múmkin. Olar da háriplerge uqsaǵan, heshqanday máni bildirmeytuǵın, ápiwayı belgi. Tómendegi atlardan da paydalanıwǵa boladı:</p>
+            <code><span>let $ = 1;<br>let _ = 2;<br>alert($+_); <span class="code_comment">// 3</span></span></code>
+            <p>Múmkin emes atlar:</p>
+            <code><span>let 1a; <span class="code_comment"></span><br>let my-name; <span class="code_comment">// Uncaught SyntaxError: Unexpected token '-’</span></span></code>
+            <div class="attentiable_article_part">
+              <h3><b>Úlken menen kishiniń parqı bar</b></h3>
+              <p><strong class="article_keywords">jas</strong> hám <strong class="article_keywords">JAS</strong> - ekewi basqa-basqa ózgeriwshi etip qabıllanadı.</p>
+            </div>
+            <div class="attentiable_article_part">
+              <h3><b>Tek ǵana Latınsha emes</b></h3>
+              <p>Latın álipbesindegi háriplerinen basqa (Kirill, Qıtay logogramları) háripler menen de at qoyıwǵa boladı, biraq usınıs etilmeydi:</p>
+              <code><span>let имя = “…”;<br>let 我 = “…”;</span></code>
+              <p>Texnik tárepten bul jerde heshqanday qátelik joq, biraq xalıq aralıq qabıl etilgen konvenciyaǵa kóre ózgeriwshilerge tek ǵana inglis tilinde at beriw kerek.</p>
+            </div>
+            <div class="attentiable_article_part">
+              <h3><b>Bul sózlerden paydalanıwǵa bolmaydı</b></h3>
+              <p>Ózgeriwshige at qoyıwda paydalanıwǵa bolmaytuǵın sózlerdiń <a class="article__link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">dizimi</a> bar. Bul sózlerden paydalana almaymız, sebebi bul sózler JStiń ózin jaratıwda paydalanılǵan.</p>
+              <p>Máselen: let, class, return, function.</p>
+              <p>Tómendegi kod sintaksislik qátelik shıǵaradı:</p>
+              <code><span>let let = 5; <span class="code_comment">// Uncaught SyntaxError: let is disallowed as a lexically bound name</span><br>let return = 5; <span class="code_comment">// Uncaught SyntaxError: Unexpected token 'return’</span></span></code>
+            </div>
+            <div class="attentiable_article_part">
+              <h3><b><strong class="article_keywords">use strict</strong> siz ózgeriwshi</b></h3>
+              <p>Ádette ózgeriwshiden paydalanbastan aldın, onı gilt sóz benen jaratıp alıw kerek. Biraq eski versiyalarda onı gilt sózsiz, ápiwayı usılda da jaratıw múmkin edi. Eger eski kodlarǵa maslastırıw ushın use strict'siz jaratsaq, bul usıl ele de isleydi:</p>
+              <code><span>// bul use strict’siz usıl<br>num = 5;<br>alert(num); <span class="article_keywords">// 5</span></span></code>
+              <p>use strict ten paydalansaq, bul tájiriybesizlik penen jazılǵan kod - qátelik keltirip shıǵaradı:</p>
+              <code><span>“use strict”;<br>num = 5; <span class="code_comment">// Uncaught ReferenceError: num is not defined</span></span></code>
             </div>
           </div>
         </details>

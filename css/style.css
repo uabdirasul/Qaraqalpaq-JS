@@ -61,8 +61,8 @@ img {
   color: #008000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+h1, h2, h3, h4, h5, h6, p, li {
+  margin: 0.5rem 0 0.5rem 0;
   padding: 0;
 }
 
@@ -92,11 +92,21 @@ code {
 
 .attentiable_article_part {
   background-color: #fbecdd;
-  padding: 0.3rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .article_keywords {
   background-color: #e0e0e0;
-  padding: 0.4rem;
+  color: #ffa500;
+  padding: 0 0.4rem;
   border-radius: 0.5rem;
+}
+
+.article__img {
+  display: block;
+}
+
+.article__link {
+  color: #0b17be;
 }
