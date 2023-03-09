@@ -28,7 +28,7 @@
         <details>
           <summary class="article__header">Variable</summary>
           <div class="article__text">
-            <h1>Ózgeriwshiler</h1>
+            <h2>Ózgeriwshiler</h2>
             <p>Hár qanday dástúr islewi ushın maǵlıwmat kerek.</p>
             <p>Máselen hár birimiz kúndelikli paydalanatuǵın "Telegram" dástúri. Telegramdaǵı doslarımız atları, olar jazǵan xabarlar, "profıl" súwretleri bulardıń barlıǵı maǵlıwmat.</p>
             <p>Ózgeriwshiler áyne usı maǵlıwmatlardı saqlawǵa járdem beredi.</p>
@@ -119,6 +119,53 @@
               <p>use strict ten paydalansaq, bul tájiriybesizlik penen jazılǵan kod - qátelik keltirip shıǵaradı:</p>
               <code><span>“use strict”;<br>num = 5; <span class="code_comment">// Uncaught ReferenceError: num is not defined</span></span></code>
             </div>
+            <h2>Konstantalar</h2>
+            <p>Konstanta yaǵnıy maǵlıwmatın ózgertirip bolmaytuǵın ózgeriwshi jaratıw ushın <strong class="article_keywords">let</strong> ornına <strong class="article_keywords">const</strong> paydalanıladı:</p>
+            <code><span>const myBirthday = “17.04.2006”;</span></code>
+            <p><strong class="article_keywords">const</strong> arqalı jaratılǵan ózgeriwshiler konstantalar delinedi. Olardıń maǵlıwmatın ózgertiwdiń ilajı joq. Ózgertiwge háreket etilse qátelik keltirip shiǵaradı.</p>
+            <code>
+              <span>
+                const myBirthday = “17.04.2006”;<br>myBirthday = “17.10.2006”; <span class="code_comment"> // Uncaught TypeError: Assignment to constant variable.</span>
+              </span>
+            </code>
+            <p>Eger dástúrshi jaratpaqshı bolǵan ózgeriwshi maǵlıwmatın keyinshelik ózgertpewin anıq bilse hám bunı basqa dástúrshilerge de bilmdirmekshi bolsa <strong class="article_keywords">const</strong>tan paydalanıw kerek.</p>
+            <h2>Bas háripli konstantalar</h2>
+            <p>Uzın, yadlap qalıwǵa qıyın nárselerge laqap qoyıp, laqaptı bas hárip penen jazıp, const arqalı konstantalarǵa aylandırıp paydalanıw dástúrshiler ushın jaqsı ámeliyat esaplanadı.</p>
+            <p>Bunday konstantalarǵa bas hárip hám _ dan paydalanıp at qoyıladı.</p>
+            <p>Mısal ushın <a class="article__link" href="https://www.pluralsight.com/blog/tutorials/understanding-hexadecimal-colors-simple">hexademical</a> formatınan paydalanıp reń jaratıp kóreyik:</p>
+            <code>
+              <span>
+                const COLOR_RED = "#F00";<br>const COLOR_GREEN = "#0F0";<br>const COLOR_BLUE = "#00F";<br>const COLOR_ORANGE = "#FF7F00";<br><span class="code_comment">// Usilardan bir ren’di saylaytug’in waqitta</span><br>let color = COLOR_ORANGE <br>alert(color) <span class="code_comment">// #FF7F00</span>
+              </span>
+            </code>
+            <p>Bul usıldıń paydalı tárepleri:</p>
+            <ol>
+              <li><strong class="article_keywords">COLOR_ORANGE</strong> <span class="article_keywords">#FF7F00</span> ge qaraǵanda yadlap qalıwg’a ańsatlaw.</li>
+              <li><strong class="article_keywords"></strong> di qáte jazıp alıwımız múmkin, biraq <strong class="article_keywords">COLOR_ORANGE</strong> di qáte jazıw imkaniyatı kem.</li>
+              <li><strong class="article_keywords">COLOR_ORANGE</strong> <strong class="article_keywords">#FF7F00</strong> ge qaraǵanda mazmunlıraq. <span class="article_keywords">COLOR_ORANGE</span> di oqıǵanda onıń apelsin reń ekenin bile alamız.</li>
+            </ol>
+            <p>Konstantlarǵa qashan tek bas hárip penen at qoyıw kerek hám qashan oǵan normal (qálegen belgi járdeminde) at qoyıw kerek?</p>
+            <p>Konstanta bul onıń maǵlıwmatı heshqashan ózgermesligin ańlatadı. Biraq, <a href="https://www.pluralsight.com/blog/tutorials/understanding-hexadecimal-colors-simple">hexademical</a> formatında jaratılǵan, qızıl reńge uqsaǵan - kod orınlanıwınan aldın maǵlıwmatı anıq bolǵan konstantalar yáki kod orınlanıwı waqtında maǵlıwmatı anıq bolatuǵın, biraq keyin ózgermeytuǵın konstantalar da bar.</p>
+            <p>Máselen:</p>
+            <code>
+              <span><span class="code_comment">// pageLoadTime = websayttıń júkleniw tezligi</span><br>const pageLoadTime = <span class="code_comment">/* websayttı júklewge ketetuǵın waqıt */</span></span>
+            </code>
+            <p>pageLoadTime yaǵnıy websayttıń júkleniwine ketken waqıttı kod orınlanıwınan aldın bile almaymız. Sebebi, onı biliw ushın aldın websayt júkleniwi kerek, júkleniwi ushın kod orınlanıwı kerek. Demek oǵan qádimgidey, ózimiz qálegenimizshe at qoya alamız. Biraq, ol ele konstanta esaplanadı. Sebebi onnan keyin de onıń maǵlıwmatı ózgermeydi.</p>
+            <p>Basqasha qılıp aytqanda tek ǵana <strong class="article_keywords">hard-coded</strong> yaǵnıy ózgeriwshi ishindegi maǵlıwmattı <strong class="article_keywords">COLOR_ORANGE</strong>degidey etip ózimiz qoldan jazsaq, oǵan bas háripler menen at qoyıw kerek.</p>
+            <h2>Durıs at qoyiw</h2>
+            <p>Ózgeriwshiler haqqındaǵı jáne bir áhmiyetli nárse bul, durıs at qoyıw.</p>
+            <p>Ózgeriwshi atı taza hám anıq bir mániske iye, ózi ishinde saqlaytuǵın maǵlıwmatqa túsindirme beretuǵın bolıw shárt.</p>
+            <p>Ózgeriwshilerge durıs at qoyıw eń áhmiyetli hám eń quramalı uqıp esaplanadı.</p>
+            <p>Ózgeriwshi atlarına bir kóz taslaw bul kodtıń úyrenshik dástúrshi yáki tájiriybeli dástúrshi tárepinen jazılǵanın ayta aladı.</p>
+            <p>Real proyektlerde kóp waqıt tazadan kod jazıwǵa emes aldınǵı dástúrshi jazǵan kodtı ózgertiw hám keńeytiwge ketedi. Durıs at qoyıw arqalı kóp waqıttan soń kod jazıwǵa qaytqanda da onı túsiniw ańsat boladı.</p>
+            <p>Ózgeriwshi jaratıwdan aldın oǵan eń mas keletuǵın at oylap tabıwıńız kerek. Usınday qılıw keyinirek sizge waqıttı tejewge járdem beredi.</p>
+            <p>At qoyıwda ámel qılınıw kerek bolǵan qaǵıydalar:</p>
+            <ol>
+              <li>Túsiniw ańsat bolǵan atlardan paydalanıń: <strong class="article_keywords">userName</strong> (paydalanıwshı atı), <strong class="article_keywords">shoppingCart</strong> (satıp alınǵan zat sebeti)</li>
+              <li>Qısqartpa yáki <strong class="article_keywords">a</strong>, <strong class="article_keywords">b</strong> , <strong class="article_keywords">c</strong> ǵa uqsaǵan júdá qısqa atlardan saqlanıń. Bolmasa, ne qılıp atırǵanıńızdı umıtıp qoyasız</li>
+              <li>Atlardı maksimal xarakteristkalaytuǵın hám qısqa qılıń. Jaqsı emes atlarǵa mısal: data (maǵlıwmat), value (baha). Bunday atlar heshnárseni anıq túsindirmeydi. Bunday atlardı tek ǵana kod konteksti qaysı maǵlıwmat yáki bahaǵa silteme qılıp atırǵanın anıq aytsaǵana qollanıw kerek.</li>
+              <li>Toparıńız ishindegi hám ózińiz jaratqan shártlerge ámel etiń. Eger saytqa kirgen adam <strong class="article_keywords">user</strong> dep atalǵan bolsa, ózgeriwshi jaratıwda soǵan uqsas qılıp jaratıw kerek. Máselen: currentUser yáki <strong class="article_keywords">newUser</strong>. <strong class="article_keywords">currentUser</strong> hám <strong class="article_keywords">user</strong>, bulardı user sózi biriktirip turıptı. Demek oǵan <strong class="article_keywords">currentVisitor</strong> yáki <strong class="article_keywords">newManInTown</strong> atları durıs kelmeydi.</li>
+            </ol>
           </div>
         </details>
       </div>
