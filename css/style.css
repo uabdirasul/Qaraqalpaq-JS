@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6, p, li {
   text-align: center;
 }
 
+details {
+  margin-bottom: 1rem;
+}
+
 .article__text {
   margin-bottom: 2rem;
 }
