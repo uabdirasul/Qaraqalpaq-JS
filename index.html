@@ -246,6 +246,44 @@
               <p>Házirde <strong class="article_keyword">BigInt</strong> túrin Firefox/Chrome/Edge/Safari browserleri qollap-quwwatlaydı. Biraq IE browseri onı qollamaydı.</p>
             </div>
             <p>Qaysı browserler bul túrdi qollanıwın <a class="article__link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#browser_compatibility">MDN</a> tolıq kestesinen kórip alıwıńız múmkin.</p>
+            <h2>String</h2>
+            <p>String barlıq belgilerdi (háripler, sanlar, simvollar) óz ishine aladı. Biraq, maǵlıwmatlar tırnaqshalar ishinde jazılıwı kerek.</p>
+            <code>
+              <span>let str = “Sálem”;<br>let str2 = “birewlik tırnaqshadan da paydalanıwǵa boladı”;<br>let phrase = `basqa ${str}di de birge jaylastırıw múmkin`;</span>
+            </code>
+            <p>JavaScriptte tırnaqshalardıń 3 túri bar:</p>
+            <ol>
+              <li>Ekilik tırnaqsha: “Sálem”.</li>
+              <li>Birewlik tırnaqsha: ‘Sálem’.</li>
+              <li>“<a class="article__link" href="https://dictionary.cambridge.org/dictionary/english/backtick">backtick</a>”lar: `Sálem`.</li>
+            </ol>
+            <p>Ekilik hám birlik tırnaqshalar ápiwayı esaplanadı. Olardıń arasında derlik ózgeshelik joq.</p>
+            <p>“backtick”lar keńeytirilgen funkcional tırnaqshalar bolıp ol <strong class="article_keyword">${…}</strong> arqalı teksttiń ishinde ózgeriwshi hám operaciyalardı baylanıstırıwǵa járdem beredi:</p>
+            <code>
+              <span>let name = “Ibrayım”;<br><span class="code_comment">// ózgeriwshi menen baylanıstırıldı</span><br>alert(`Sálem, ${name}!`);<span class="code_comment"> // Sálem Ibrayım!</span><br><span class="code_comment">// operaciya menen baylanıstırıldı</span><br>alert(`juwap ${1+2}ke teń`); <span class="code_comment">// juwap 3ke teń</span></span>
+            </code>
+            <p><strong class="article_keyword">${…}</strong> ishindegi operaciya tekst penen biriktirildi, endi onıń juwabı da teksttiń bir bólegine aylanadı. <strong class="article_keyword">${…}</strong> diń ishine name sıyaqlı ózgeriwshi yáki <strong class="article_keyword">1 + 2</strong>ge uqsaǵan matematik operaciyalardı da jaylastıra alamız.</p>
+            <p>Bunday funkcionallıqtan tek ǵana “backtick”lerde paydalana alamız. Basqa tırnaqshalarda bunday funkcionallıq joq!</p>
+            <code>
+              <span>alert(”${1+2}tiń juwabı 3 shıǵadı”); <span class="code_comment">// ${1+2}tiń juwabı 3 shıǵadı (ápiwayı tırnaqshalar bunday qıla almaydı)</span></span>
+            </code>
+            <p>String haqqında tolıq string ushın arnalǵan bólimde kórip shıǵamız.</p>
+            <div class="attentiable_article_part">
+              <p>Ayırım dástúrlew tillerinde, tek bir qálegen belgi ushın arnalǵan “character” maǵlıwmat túri bar. Máselen: C hám Java dástúrlew tillerinde “char” degen maǵlıwmat túri bar.</p>
+              <p>JavaScriptte bolsa onday túr joq. Tek ǵana bir túr: string bar. String túriniń maǵlıwmatı bos (” ”) yáki tek bir belgiden (”a”) ibarat bolıwı múmkin.</p>
+            </div>
+            <h2>Boolean (logikalıq túri)</h2>
+            <p>Boolean arqalı tek ǵana eki túrli maǵlıwmattı (bahani) saqlasaq boladı: <strong class="article_keyword">true</strong> hám <strong class="article_keyword">false</strong>.</p>
+            <p>Bul tip kóbinese awa/yaq sorawlarına juwap beriw ushın paydalanıladı: <strong class="article_keyword">true</strong> - durıs, <strong class="article_keyword">false</strong> - jalǵan degendi bildiredi.</p>
+            <p>Máselen:</p>
+            <code>
+              <span>let isMarried = false; <span class="code_comment">// yaq, úylenbegen</span><br>let isGraduated = true; <span class="code_comment">// awa, oqıwdı pitkergen</span></span>
+            </code>
+            <p>Boolean maǵlıwmatın (bahasın) sanlardı salıstırıp ta alıw múmkin:</p>
+            <code>
+              <span>let isGreater = 4 > 1;<br>alert(isGreater); <span class="code_comment">// true (salıstırıw nátiyjesi “durıs” boladı - 4 1den úlken)</span></span>
+            </code>
+            <p>Boolean haqqında Logikalıq operatorlar bóliminde tolıq kórip shıǵamız.</p>
           </div>
         </details>
       </div>
