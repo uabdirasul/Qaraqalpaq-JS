@@ -305,6 +305,61 @@
               <span>let age = 100;<br><span class="code_comment">// maǵlıwmattı undefined qa ózgertemiz</span><br>age = undefined;<br>alert(age); <span class="code_comment">// undefined</span></span>
             </code>
             <p>Biraq bunday qılıw máslahát etilmeydi. Ádette ózgeriwshiniń ishin bosatıw yáki belgisiz qılıw ushın <strong class="article_keyword">null</strong> paydalanıladı. <strong class="article_keyword">undefined</strong>ti bolsa paydalanıw shárt emes, sebebi standart túrde JStiń ózi heshqanday maǵlıwmat tayınlanbaǵan ózgeriwshilerge usı bahanı biriktirip qoyadı.</p>
+            <h2>Objects and symbols</h2>
+            <p><strong class="article_keyword">object</strong> basqa túrlerden keskin parıq qıladı.</p>
+            <p><strong class="article_keyword">object</strong>ten tısqarı hárqanday túr “primitive” dep ataladı. Sebebi, olar tek ǵana bir zattı saqlaydı (san bolsın, tekst bolsın…). Parıqlaw ushın, <strong class="article_keyword">object</strong>lerde tek bir emes birqansha maǵlıwmatlardı kirgiziwimiz múmkin.</p>
+            <p><strong class="article_keyword">object</strong>lerge arnawlı bólim ajıratıw kerek. <strong class="article_keyword">object</strong>lerdi keyingi bólimlerde tolıǵıraq túsinip alamız.</p>
+            <p><strong class="article_keyword">symbol</strong> túri <strong class="article_keyword">object</strong>ler ushin birden-bir, tákirarlanbas identifikator jaratıw ushın paydalanıladı. <strong class="article_keyword">symbol</strong>dı tolıq túsiniw ushın, birinshi bolıp <strong class="article_keyword">object</strong>ti túsinip alıwımız kerek. Sonıń ushın onı da bólek kórip shıǵamız.</p>
+            <h2>typeof operatorı</h2>
+            <p><strong class="article_keyword">typeof</strong> operatorı operandtıń maǵlıwmat túrin qaytarıp beredi. Onnan hárqıylı maǵlıwmatlardı qayta islewdi qálegenimizde yáki tek maǵlıwmat túrin biliwdi qálegenimizde paydalanamız:</p>
+            <code>
+              <span>typeof undefined; <span class="code_comment">// ‘undefined’</span><br>
+                typeof 0; <span class="code_comment">// ‘number’</span><br>
+                typeof 10n; <span class="code_comment">// ‘bigint’</span><br>
+                typeof true; <span class="code_comment">// ‘boolean’</span><br>
+                typeof “foo”; <span class="code_comment">// ‘string’</span><br>
+                typeof Symbol("id"); <span class="code_comment">// 'symbol'</span><br>
+                typeof Math; <span class="code_comment">// 'object' (1)</span><br>
+                typeof null; <span class="code_comment">// 'object' (2)</span><br>
+                typeof alert; <span class="code_comment">// 'function' (3)</span></span>
+            </code>
+            <p>Joqarıdaǵı 3 qatar qosımsha túsindirme talap etedi:</p>
+            <ol>
+              <li><strong class="article_keyword">Math</strong> bul matematikalıq ámeller ushın arnalǵan “built-in” yaǵnıy JStıń óziniń <strong class="article_keyword">object</strong>i. Ol haqqında <strong class="article_keyword">Numbers</strong> (sanlar) bóliminde tolıq kórip shıǵamız.</li>
+              <li><strong class="article_keyword">typeof null</strong>diń juwabı <strong class="article_keyword">object</strong>. Bul <strong class="article_keyword">typeof</strong>tiń rásmiy tán alınǵan qáteligi bolıp ol JavaScripttiń dáslepki kúnlerinde kelip shıqqan. Hám kodlar bir-birine mas keliwi ushın solayınsha qaldırılǵan. Negizinde bul jerdegi <strong class="article_keyword">typeof null</strong> qáte bolıwı kerek!</li>
+              <li><strong class="article_keyword">typeof alert</strong>tiń juwabı <strong class="article_keyword">function</strong> boldı. Sebebi <strong class="article_keyword">alert</strong> - bul funkciya (<strong class="article_keyword">function</strong>). Funkciyalar haqqında da arnawlı bólimde tanısamız, hám ol jerde JSta arnawlı function túri joq ekenligin de kóremiz. Funckiyalar (<strong class="article_keyword">function</strong>) <strong class="article_keyword">object</strong> túrine tiyisli esaplanadı. Biraq <strong class="article_keyword">typeof</strong> bizge <strong class="article_keyword">object</strong> emes <strong class="article_keyword">function</strong>di qaytardı. Bul qátelik te JStiń dáslepki kúnlerinen kelip shıqqan. Texnik tárepten bunday bolıwı qáte, biraq ámelde qolaylı bolıwı múmkin.</li>
+            </ol>
+            <div class="attentiable_article_part">
+              <h3><b><strong class="article_keyword">typeof(x)</strong> sintaksisi</b></h3>
+              <p><strong class="article_keyword">typeof x</strong>tiń basqasha sintaksisinen de paydalanıw múmkin: <strong class="article_keyword">typeof(x)</strong>. Bul ekewi de birdey. </p>
+              <p>Jáne de túsinikli bolıwı ushın: <strong class="article_keyword">typeof</strong> - bul operator, funkciya emes. Bul jerdegi qawsırmalar <strong class="article_keyword">typeof</strong>tiń bir bólegi emes. Bul qawsırmalar matematikalıq gruppalaw ushın paydalanıladı.</p>
+            </div>
+            <h2>Juwmaq</h2>
+            <p>JavaScriptte tiykarǵı 8 maǵlıwmat túri bar.</p>
+            <ul>
+                <li>7 “primitive” túrine kiriwshi tipler:
+                  <ul>
+                    <li>number - hár qıylı sanlar ushın: pútin yáki bólshek sanlar. Pútin sanlar ±((2**53)-1) ge deyin sheklengen</li>
+                    <li>BigInt - júdá ulken sanlar ushın</li>
+                    <li>string - tekstler ushın. Bul túrdegi maǵlıwmatta heshqanday belgi bolmawı yáki kóp bolıwı múmkin. JSte tek ǵana bir belgi ushın arnalǵan jeke maǵlıwmat túri joq.</li>
+                    <li>boolean - true hám false ushın</li>
+                    <li>null - belgisiz maǵlıwmatlar ushın - ózinde tek bir bahası bolǵan jeke túr</li>
+                    <li>undefined - júklenbegen, tayınlanbaǵan maǵlıwmatlar ushın - ózinde tek bir bahası bolǵan jeke túr</li>
+                    <li>symbol - jalǵız, tákirarlanbas identifikatorlar ushın</li>
+                  </ul>
+                </li>
+                <li>“non-primitive” túrine kiretuǵın jalǵız túr:
+                  <ul>
+                    <li>object - quramalı maǵlıwmat strukturalar ushın</li>
+                  </ul>
+                </li>
+            </ul>
+            <p><strong class="article_keyword">typeof</strong> operatorı ózgeriwshi ishindegi maǵlıwmattıń túrin anıqlawǵa járdem beredi.</p>
+            <ul>
+              <li>Ádette <strong class="article_keyword">typeof x</strong> kórinisinde jazıladı, biraq <strong class="article_keyword">typeof(x)</strong> qılıp ta paydalanıw múmkin</li>
+              <li><strong class="article_keyword">typeof</strong> maǵlıwmattıń túrin tırnaqshalar ishinde qaytarıp beredi: <strong class="article_keyword">“string”</strong>.</li>
+              <li><strong class="article_keyword">typeof</strong>ti <strong class="article_keyword">null</strong> menen paydalansaq nátiyjede <strong class="article_keyword">object</strong> shıǵadı. Bul rásmiy túrde tildiń qáteligi esaplanadı. Negizinde ol <strong class="article_keyword">object</strong> emes.</li>
+            </ul>
           </div>
         </details>
       </div>
