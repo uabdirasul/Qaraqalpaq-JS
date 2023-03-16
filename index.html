@@ -380,6 +380,21 @@
             <code>
               <span>let value = true;<br>alert(typeof value); <span class="code_comment">// boolean</span><br>value = String(value); <span class="code_comment">// endi true stringge aylandi</span><br>alert(typeof value); <span class="code_comment">// string</span></span>
             </code>
+            <h2>Number’ge aylandırıw (Numeric Conversion)</h2>
+            <p>Matematikalıq funkciya yáki ámellerde <strong class="article_keyword">Numeric Conversion</strong> avtomatik túrde ámelge asadi.</p>
+            <p>Máselen, <strong class="article_keyword">/</strong> belgisi <strong class="article_keyword">number</strong> túrine kirmeytuǵın maǵlıwmat penen paydalanılǵanda:</p>
+            <code>
+              <span>alert("6" / "2"); <span class="code_comment">// 3, stringler number túrine avtomatik túrde almastırıldı</span></span>
+            </code>
+            <p>Maǵlıwmat túrin <strong class="article_keyword">number</strong> ge ózgertiwde <strong class="article_keyword">Number(x)</strong> ten de paydalanıwımız múmkin:</p>
+            <code>
+              <span>let str = "123";<br>alert(typeof str); <span class="code_comment">// string</span><br>let num = Number(str); <span class="code_comment">// "123" stringnen numberge aylandı: 123</span><br>alert(typeof num) <span class="code_comment">// number</span></span>
+            </code>
+            <p>Ádette bunday usıldan (Number(x)) <strong class="article_keyword">string</strong>ge tiykarlanǵan derekten maǵlıwmattı alatuǵınımızdı bilsek, biraq onı <strong class="article_keyword">number</strong> túrinde kiritiliwin qálegenimizde paydalanamız.</p>
+            <p>Eger <strong class="article_keyword">string</strong> ishindegi maǵlıwmattı <strong class="article_keyword">number</strong> túrine aylandırmaqshı bolsaq biraq, <strong class="article_keyword">string</strong> ishindegi maǵlıwmat san bolmasa nátiyjede <strong class="article_keyword">NaN</strong> juwabın qaytadı:</p>
+            <code>
+              <span>let age = Number(”san ornına háripler jazıldı”);<br>alert(age); <span class="code_comment">// NaN, basqa túrge aylandırıw sátsizlikke ushıradı</span></span>
+            </code>
           </div>
         </details>
       </div>
