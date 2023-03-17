@@ -395,11 +395,116 @@
             <code>
               <span>let age = Number(”san ornına háripler jazıldı”);<br>alert(age); <span class="code_comment">// NaN, basqa túrge aylandırıw sátsizlikke ushıradı</span></span>
             </code>
+            <p><strong class="article_keyword">number</strong> túrine aylandırıwdaǵı qaǵıydalar:</p>
+            <table>
+              <tr>
+                <th>Kiritilgen maǵlıwmat</th>
+                <th>Qaytatuǵın maǵlıwmat</th>
+              </tr>
+              <tr>
+                <td>undefined</td>
+                <td>NaN</td>
+              </tr>
+              <tr>
+                <td>null</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>true hám false</td>
+                <td>1 hám 0</td>
+              </tr>
+              <tr>
+                <td>string</td>
+                <td>Basındaǵı yáki aqırındaǵı boslıqlar (bos jerler, jańa qatarlar, h.t.b) alıp taslanadı. Qalǵan <strong class="article_keyword">string</strong> (tekst)tiń ishi bos bolsa, nátiyje <strong class="article_keyword">0</strong> ge teń boladı. Keri jaǵdayda bolsa qátelik bolıp, <strong class="article_keyword">NaN</strong> qaytadı.</td>
+              </tr>
+            </table>
+            <p>Mısallar:</p>
+            <code>
+              <span>
+                alert(Number("   123   ")); <span class="code_comment">// 123</span><br>alert(Number("123z")); <span class="code_comment">// NaN (z'ti number túrine aylandıra almaydı)</span><br>alert(Number(true)); <span class="code_comment">// 1</span><br>alert(Number(false)); <span class="code_comment">// 0</span>
+              </span>
+            </code>
+            <p>Hárdayım yadıńızda tursın: <strong class="article_keyword">null</strong> hám <strong class="article_keyword">undefined</strong>ti <strong class="article_keyword">number</strong> túrine almastırıwǵa háreket etilse, olar hárqıylı nátiyjeler qaytaradı. <strong class="article_keyword">null</strong> <strong class="article_keyword">0</strong>ge, <strong class="article_keyword">undefined</strong> <strong class="article_keyword">NaN</strong>ǵa aylanadı.</p>
+            <h2>Boolean’ge aylandırıw (Boolean Conversion)</h2>
+            <p>Boolean túrine aylandırıw eń ańsatı esaplanadı.</p>
+            <p>Boolean túrine ózgertiwde logikalıq ámellerden paydalanıladı. Biraq <strong class="article_keyword">Boolean(x)</strong>ten de paydalanıp maǵlıwmat túrin ózgertiwimiz múmkin.</p>
+            <p>Túr ózgertiwdegi qaǵıydalar:</p>
+            <ul>
+              <li>“bos string”, <strong class="article_keyword">0</strong>, <strong class="article_keyword">null</strong>, <strong class="article_keyword">undefined</strong> hám <strong class="article_keyword">NaN</strong> - <strong class="article_keyword">false</strong> bahasına ózgeredi</li>
+              <li>Odan tısqarı bahalar <strong class="article_keyword">true</strong> ge ózgeredi</li>
+            </ul>
+            <p>Mısal ushın:</p>
+            <code>
+              <span>
+                alert(Boolean(1)); <span class="code_comment">// true</span><br>alert(Boolean(0)); <span class="code_comment">// false</span><br>alert(Boolean("sálem")); <span class="code_comment">// true</span><br>valert(Boolean("")); <span class="code_comment">// false</span>
+              </span>
+            </code>
+            <div class="attentiable_article_part">
+              <h3><b><strong class="article_keyword">string</strong> formatındaǵı <strong class="article_keyword">0</strong> (”0”) <strong class="article_keyword">1</strong>ge ózgeredi</b></h3>
+              <p>PHPge uqsaǵan tillerde “0”, Boolean túrine ózgertilgende <strong class="article_keyword">false</strong> qaytarıladı. Biraq JavaScriptte bos jerden ibarat <strong class="article_keyword">string</strong> bolsa da ol <strong class="article_keyword">true</strong> boladı:</p>
+              <code>
+                <span>
+                  alert(Boolean("0")); <span class="code_comment">// true</span><br>alert(Boolean(" ")); <span class="code_comment">// bos jerler de true boladı</span>
+                </span>
+              </code>
+            </div>
+            <h2>Juwmaq</h2>
+            <p>Eń kóp paydalanılatuǵın konvertaciyalar: <strong class="article_keyword">string</strong>’ge, <strong class="article_keyword">number</strong>’ge ha’m <strong class="article_keyword">boolean</strong>’ge aylandırıw.</p>
+            <p><strong class="article_keyword">String Conversion</strong> (string túrine ózgertiw) - <strong class="article_keyword">alert</strong>’ge uqsaǵan nátiyjesi <strong class="article_keyword">string</strong> túrinde qaytatuǵın funkciyalarda júz beredi. Oǵan maǵlıwmattı qanday túrde bersek te nátiyjesin kórsetiw ushın onı ózi <strong class="article_keyword">string</strong>'ge avtomatik ózgertip aladı. Yáki onı ózimiz <strong class="article_keyword">String(x)</strong> arqalı da ózgertsek boladı.</p>
+            <p><strong class="article_keyword">Numeric Conversion</strong> (number túrine ózgertiw) - matematikalıq ámellerde avtomatik júz beredi. Sonday-aq, ózimiz <strong class="article_keyword">Number(x)</strong> ten paydalanıp ózgertiwimiz mu’mkin.</p>
+            <p><strong class="article_keyword">number</strong> túrine ózgertiwdegi qaǵıydalar:</p>
+            <table>
+              <tr>
+                <th>Kiritilgen maǵlıwmat</th>
+                <th>Qaytatuǵın maǵlıwmat</th>
+              </tr>
+              <tr>
+                <td>undefined</td>
+                <td>NaN</td>
+              </tr>
+              <tr>
+                <td>null</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>true hám false</td>
+                <td>1 hám 0</td>
+              </tr>
+              <tr>
+                <td>string</td>
+                <td>Basındaǵı yáki aqırındaǵı boslıqlar (bos jerler, jańa qatarlar, h.t.b) alıp taslanadı. Qalǵan <strong class="article_keyword">string</strong> (tekst)tiń ishi bos bolsa, nátiyje <strong class="article_keyword">0</strong> ge teń boladı. Keri jaǵdayda bolsa qátelik bolıp, <strong class="article_keyword">NaN</strong> qaytadı.</td>
+              </tr>
+            </table>
+            <p><strong class="article_keyword">Boolean Conversion</strong> (boolean túrine ózgertiw) - logikalıq ámellerde avtomatik júz beredi. Yáki ózimiz <strong class="article_keyword">Boolean(x)</strong> arqalı da ózgerte alamız.</p>
+            <p><strong class="article_keyword">boolean</strong> túrine ózgertiwdegi qaǵıydalar:</p>
+            <table>
+              <tr>
+                <th>Kiritilgen maǵlıwmat</th>
+                <th>Qaytatuǵın maǵlıwmat</th>
+              </tr>
+              <tr>
+                <td>0, null, undefined, NaN, “0”</td>
+                <td>false</td>
+              </tr>
+              <tr>
+                <td>basqa qálegen maǵlıwmat</td>
+                <td>true</td>
+              </tr>
+            </table>
+            <p>Bul qaǵıydalardıń kóbisi túsiniw hám yadlap qalıwǵa ańsat. Biraq kóbinese umıtılıp qalatuǵın qaǵıydalar bar:</p>
+            <ul>
+              <li>
+                <strong class="article_keyword">undefined</strong> <strong class="article_keyword">number</strong> túrine ózgertilgende nátiyje <strong class="article_keyword">0</strong> emes, <strong class="article_keywordstrong article_keyword">NaN</strong> boladı.
+              </li>
+              <li>
+                “0” hám “ ” ge uqsaǵan bos orınlı <strong class="article_keyword">string</strong>ler <strong class="article_keyword">boolean</strong> túrine ózgertilgende nátiyje <strong class="article_keyword">true</strong> boladı.
+              </li>
+            </ul>
+            <p>Bul bólimde <strong class="article_keyword">object</strong> konvertaciyası haqqında heshqanday maǵlıwmat berilmegen. Onı <strong class="article_keyword">object</strong>ler haqqındaǵı tiykarǵı nárselerdi bilip alǵannan keyin, kórip shıǵamız.</p>
           </div>
         </details>
       </div>
     </section>
-
   </main>
 </body>
 </html>
