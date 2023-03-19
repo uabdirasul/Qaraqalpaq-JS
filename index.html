@@ -540,6 +540,71 @@
               <li>Qaldıqtı anıqlaw (remainder) - <strong class="article_keyword">%</strong>,</li>
               <li>Dárejeni anıqlaw (exponentiation) - <strong class="article_keyword">**</strong>.</li>
             </ul>
+            <h2>Qaldıqtı anıqlaw % (remainder)</h2>
+            <p><strong class="article_keyword">%</strong> operatorı sırtqı kórinisine qaramay onıń JavaScriptte payızlarǵa baylanıslı jeri joq.</p>
+            <p>
+              <strong class="article_keyword">a % b</strong>nıń nátiyjesi - <strong class="article_keyword">a</strong>nı <strong class="article_keyword">b</strong>ǵa bólgendegi qaldıq boladı.
+            </p>
+            <p>Mısalı:</p>
+            <code>
+              <span>
+                alert(5 % 2); <span class="code_comment">// 1, 5ti 2ge bólsek qaldıq 1 shıǵadı</span><br>alert(8 % 3); <span class="code_comment">// 2, 8di 3ke bólsek qaldıq 2 shıǵadı</span><br>alert(8 % 4); <span class="code_comment">// 0, 8di 4ke bólsek qaldıq shıqpaydı</span>
+              </span>
+            </code>
+            <h2>Dárejeni anıqlaw ** (exponentiation)</h2>
+            <p>
+              <strong class="article_keyword">a ** b</strong> nıń nátiyjesi - <strong class="article_keyword">a</strong>nıń <strong class="article_keyword">b</strong>inshi dárejesi boladı.
+            </p>
+            <p>Mısalı:</p>
+            <code>
+              <span>
+                alert(2 ** 2); <span class="code_comment">// 2² = 4</span><br>alert(2 ** 3); <span class="code_comment">// 2³ = 8</span><br>alert(2 ** 4); <span class="code_comment">// 2⁴ = 16</span>
+              </span>
+            </code>
+            <p>Bul operatordı tek ǵana pútin emes, bólshek sanlar menen de paydalana alamız:</p>
+            <code>
+              <span>
+                alert(4 ** (1/2)); <span class="code_comment">// 2</span><br>alert(8 ** (1/3)); <span class="code_comment">// 2</span>
+              </span>
+            </code>
+            <h2>Binary + operatorı járdeminde tekstlerdi bir-birine qosıw</h2>
+            <p>Ádette qosıw operatorı <strong class="article_keyword">+</strong> sanlardı bir-birine qosadı.</p>
+            <p>Biraq binary <strong class="article_keyword">+</strong> <strong class="article_keyword">string</strong> (tekst)ler menen paydalanılsa ol tekstlerdi bir-birine birlestiredi:</p>
+            <code>
+              <span>
+                let s = "my" + "string";<br>alert(s); <span class="code_comment">// mystring</span>
+              </span>
+            </code>
+            <p>Yadıńızda bolsın, eger operandlardıń birewi string bolsa, ekinshi operand ta string’ge ózgertiledi:</p>
+            <code>
+              <span>
+                alert('1' + 2); <span class="code_comment">// 12</span><br>alert(2 + '1'); <span class="code_comment">// 21</span>
+              </span>
+            </code>
+            <p>Qaysı operand string bolıwınıń áhmiyeti joq, meyli ol birinshi bolsın yáki ekinshi ol báribir string’ge ózgeredi.</p>
+            <p>Tómende sál quramalıraq mısal berilgen:</p>
+            <code>
+              <span>alert(2 + 2 + '1'); <span class="code_comment">// 41</span></span>
+            </code>
+            <p>
+              Bul jerde operatorlar izbe-izlikte orınlandı. Birinshi operator <strong class="article_keyword">2</strong>ni <strong class="article_keyword">2</strong>ge qostı nátiyje <strong class="article_keyword">4</strong>, keyingi operator bolsa oǵan <strong class="article_keyword">string</strong> túrindegi <strong class="article_keyword">1</strong> di qostı, nátiyjede <strong class="article_keyword">4 + ‘1’ = 41</strong>.
+            </p>
+            <code>
+              <span>
+                alert('1' + 2 + 2); <span class="code_comment">// bul 14 emes 122 boladı.</span>
+              </span>
+            </code>
+            <p>
+              Bul jerde birinshi operand <strong class="article_keyword">string</strong>, hám <strong class="article_keyword">compiler</strong> keyingi operandlardı da <strong class="article_keyword">string</strong>ge ótkeredi. <strong class="article_keyword">2</strong>  <strong class="article_keyword">‘1’</strong>ge qosıladı, demek nátiyje <strong class="article_keyword">‘1’ + 2 = ‘12’</strong> hám <strong class="article_keyword">‘12’ + 2 = ‘122’</strong>.
+            </p>
+            <p>
+              Binary + operatorı string ler menen usılayınsha islesetuǵın birden-bir operator. Basqa arifmetik operatorlar tek ǵana sanlar menen isleydi yáki <strong class="article_keyword">string</strong> ishinde tek san bolsa onı <strong class="article_keyword">number</strong> túrine ózgertedi:
+            </p>
+            <code>
+              <span>
+                alert(6 - '2'); <span class="code_comment">// 4, '2' number túrine ózgertildi</span><br>alert('6' / '2'); <span class="code_comment">// 3, eki operand ta number túrine ózgertildi</span>
+              </span>
+            </code>
           </div>
         </details>
       </div>
