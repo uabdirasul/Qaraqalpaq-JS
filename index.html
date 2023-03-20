@@ -605,6 +605,45 @@
                 alert(6 - '2'); <span class="code_comment">// 4, '2' number túrine ózgertildi</span><br>alert('6' / '2'); <span class="code_comment">// 3, eki operand ta number túrine ózgertildi</span>
               </span>
             </code>
+            <h2>Number túrine ózgertiw, unary + operatorı</h2>
+            <p>
+              <strong class="article_keyword">+</strong> eki túrde ushırasadı: <strong class="article_keyword">binary +</strong> hám <strong class="article_keyword">unary +</strong>.
+            </p>
+            <p>
+              <strong class="article_keyword">unary +</strong> yáki basqasha qılıp aytqanda tek bir operandqa qollanılatuǵın plus operatorı sanlarǵa heshqanday tásir ótkermeydi. Biraq eger operand <strong class="article_keyword">number</strong> túrinde bolmasa, bul operator onıń maǵliwmat túrin <strong class="article_keyword">number</strong> túrine ótkeredi.
+            </p>
+            <p>Máselen:</p>
+            <code>
+              <span>
+                <span class="code_comment">// sanlarǵa heshqanday tásir qılmaydı</span><br>let x = 1;<br>alert(+x);<span class="code_comment">// 1</span><br>let y = -2;<br>alert(+y); <span class="code_comment">// -2</span><br><br><span class="code_comment">// maǵlıwmat túri number emeslerdi number ge aylandıradı</span><br>alert(+true); <span class="code_comment">// 1</span><br>alert(+""); <span class="code_comment">// 0</span>
+              </span>
+            </code>
+            <p>
+              Negizinde <strong class="article_keyword">unary +</strong> <strong class="article_keyword">Number(x)</strong> penen teńdey jumıs atqaradı, biraq <strong class="article_keyword">unary +</strong> qısqaraq.
+            </p>
+            <p>
+              Kóbinese dástúr ishinde string formatındaǵı maǵlıwmattı number túrine ótkeriw kerek bolıp qaladı. Mısalı: HTML form’nan maǵlıwmat alǵan waqıtta, sebebi olar kóbinese string bolıp keledi. Eger sol maǵlıwmatlardı bir-birine qosıw kerek bolsa ne qılamız?
+            </p>
+            <p><strong class="article_keyword">Binary +</strong> sol maǵlıwmatlardı string sıpatında bir-birine qosadı:</p>
+            <code>
+              <span>
+                let apple = "2";<br>let oranges = "3";<br>alert(apple + oranges); <span class="code_comment">// 23</span>
+              </span>
+            </code>
+            <p>
+              Eger biz maǵlıwmattı <strong class="article_keyword">number</strong> sıpatında bir-birine qosıwdı qálesek, birinshi gezekte onıń túrin <strong class="article_keyword">number</strong>ge ózgertiwimiz keyin bir-birine birlestiriwimiz kerek:
+            </p>
+            <code>
+              <span>
+                let apple = "2";<br>let oranges = "3";<br><br><span class="code_comment">// ekewiniń de maǵlıwmat túri binary +tan aldın ózgertildi</span><br>alert(+apple + +oranges); <span class="code_comment">// 5</span><br><br><span class="code_comment">// uzınlaw varinantı</span><br><span class="code_comment">// alert(Number(apples) + Number(oranges)); // 5</span>
+              </span>
+            </code>
+            <p>
+              Matematikalıq tárepten <strong class="article_keyword">+ plus</strong>tın bunday bolıwı birtúrli bolıwı múmkin. Biraq dástúrshilik tárepten heshqanday túsiniksiz nárse joq: birinshi, <strong class="article_keyword">unary +</strong> <strong class="article_keyword">string</strong>lerdi <strong class="article_keyword">number</strong>lerge ózgertedi, keyin <strong class="article_keyword">binary</strong> olardı bir-birine qosadı.
+            </p>
+            <p>
+              Ne ushın <strong class="article_keyword">unary +</strong>, <strong class="article_keyword">binary +</strong> den aldın orınlanadı? Oǵan sebep - bul olardıń <strong class="article_keyword">orınlanıw tártibi</strong>nde (prioritet).
+            </p>
           </div>
         </details>
       </div>
