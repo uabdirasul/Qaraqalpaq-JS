@@ -725,6 +725,36 @@
             <p>
               Kórip turǵanıńızday <strong class="article_keyword">unary plus</strong>dıń orınlanıw tártip sanı <strong class="article_keyword">14</strong> bolıp ol binary plus dan úlkenlew. Sonıń ushın <strong class="article_keyword">+apples + +oranges</strong> mısalında <strong class="article_keyword">unary plus</strong> birinshi orınlandı.
             </p>
+            <h2>Tayinlaw operatori</h2>
+            <p>
+              Sonı da aytıp ótiwimiz kerek <strong class="article_keyword">=</strong> de operator esaplanadı. Bul belgi orınlanıw tártip sanı kestesinde (precedence table) tómen bahaǵa iye yaǵnıy 2.
+            </p>
+            <p>
+              Sonıń ushın, <strong class="article_keyword">x = 2 * 2 + 1</strong> sıyaqlı ózgeriwshini jaratqanımızda, birinshi ámeller orınlanadı sońınan ol ózgeriwshige júklenedi.
+            </p>
+            <code>
+              <span>
+                let x = x = 2 * 2 + 1;<br><br>alert(x); <span class="code_comment">// 5</span>
+              </span>
+            </code>
+            <h3>Tayınlaw operatorı = baha (maǵlıwmat) qaytaradı</h3>
+            <p>
+              JavaScripttegi barlıq operatorlar baha qaytaradı. <strong class="article_keyword">+,</strong> <strong class="article_keyword">-</strong> jáne de <strong class="article_keyword">=</strong> de bul qásiyetke iye:
+            </p>
+            <code>
+              <span>
+                let a = 1;<br>let b = 2;<br><br>let c = 3 - (a = b + 1);<br><br>alert(a); <span class="code_comment">// 3</span><br>+alert(c); <span class="code_comment">// 0</span>
+              </span>
+            </code>
+            <p>
+              Joqarıdaǵi kodtaǵı <strong class="article_keyword">(a = b + 1)</strong> ámeliniń nátiyjesi <strong class="article_keyworde">a</strong>ǵa júkletiledi (3ke teń boladı). Hám onnan keyingi ámellerde de paydalanıladı.
+            </p>
+            <p>
+              Bunday kodlardıń qalay orınlanıwın bilip alıwımız kerek, sebebi bunday kodlardı JavaScripttiń library’larında ushıratıwımız múmkin.
+            </p>
+            <p>
+              Jáne de bunday etip kod jazıw máslahát etilmeydi. Bunday jazıw kodtıń oqılıwın qıyınlastıradı.
+            </p>
           </div>
         </details>
       </div>
