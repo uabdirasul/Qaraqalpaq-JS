@@ -774,6 +774,31 @@
               </span>
             </code>
             <p>Bul kod oqıw ushın ańsatlaw boldı.</p>
+            <h2>Ornında ózgertiw</h2>
+            <p>
+              Ádette ózgeriwshige operatordi biriktiriw, onnan keyin sol ózgeriwshiniń ózine jańa maǵlıwmattı da júklewimiz kerek.
+            </p>
+            <p>Mısalı:</p>
+            <code>
+              <span>
+                let n = 2;<br>n = n + 5;<br>n = n * 2;
+              </span>
+            </code>
+            <p>Bul operatorlardı <strong class="article_keyword">+=</strong> hám <strong class="article_keyword">*=</strong> arqalı qısqaraq etip jazıwımız múmkin:</p>
+            <code>
+              <span>
+                let n = 2;<br>n += 5; <span class="code_comment">// endi n 7ge teń boldı (n = n + 5 menen birdey nátiyje qaytadı)</span><br>n *= 2; <span class="code_comment">// endi n 14ge teń boldı (n = n * 2 menen birdey nátiyje qaytadı)</span><br><br>alert(n); <span class="code_comment">// 14</span>
+              </span>
+            </code>
+            <p>
+              Bunday qısqa usılda jazıwdı barlıq operatorlar menen paydalanıw múmkin: <strong class="article_keyword">/=</strong>, <strong class="article_keyword">-=</strong> h.t.b.
+            </p>
+            <p>Bunday etip jazıw - ápiwayı jol arqalı jazıw menen birdey, biraq bul usılda jazılǵan kod eń aqırǵı orınlanadı:</p>
+            <code>
+              <span>
+                let n = 2;<br><br>n *= 3 + 5; <span class="code_comment">// birinshi oń tárep orınlanadı, hám ol n *= 8 benen birdey boladı</span><br><br>alert( n ); <span class="code_comment">// 16</span>
+              </span>
+            </code>
           </div>
         </details>
       </div>
